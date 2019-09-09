@@ -7,10 +7,6 @@
 #include <string>
 
 class GroceryItem {
-	private:
-    	std::string _UPC, _brandName, _productName;
-
-    double _price;
 
 	public:
 		std::string UPC();
@@ -37,5 +33,10 @@ class GroceryItem {
 					_brandName(brandName),
 					_productName(productName),
 					_price(price) {}
+		
+	private:
+    	std::string _UPC, _brandName, _productName;
+
+    double _price;
 		
 };
