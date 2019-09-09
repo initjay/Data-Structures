@@ -8,12 +8,12 @@
 
 class GroceryItem {
 	// comparison operators
-	friend bool operator==(const GroceryItem & lhs, const GroceryItem& rhs);
-	friend bool operator<(const GroceryItem & lhs, const GroceryItem& rhs);
-	friend bool operator!=(const GroceryItem & lhs, const GroceryItem& rhs);
-	friend bool operator<=(const GroceryItem & lhs, const GroceryItem& rhs);
-	friend bool operator>(const GroceryItem & lhs, const GroceryItem& rhs);
-	friend bool operator>=(const GroceryItem & lhs, const GroceryItem& rhs);
+	friend bool operator==(const GroceryItem & lhs, const GroceryItem & rhs);
+	friend bool operator<(const GroceryItem & lhs, const GroceryItem & rhs);
+	friend bool operator!=(const GroceryItem & lhs, const GroceryItem & rhs);
+	friend bool operator<=(const GroceryItem & lhs, const GroceryItem & rhs);
+	friend bool operator>(const GroceryItem & lhs, const GroceryItem & rhs);
+	friend bool operator>=(const GroceryItem & lhs, const GroceryItem & rhs);
 	
 	// insertion and extraction operators
 	friend std::istream & operator>>(std::istream & stream, GroceryItem & GI);
