@@ -59,6 +59,19 @@ bool operator>=(const GroceryItem & lhs, const GroceryItem& rhs) {
     return lhs == rhs || rhs < lhs;
 }
 
+// extraction function
+std::istream & operator>>(std::istream & stream, GroceryItem & GI) {
+
+}
+
+// insertion function
+std::ostream & operator<<(std::ostream & stream, const GroceryItem & GI) {
+    stream << "\"" << GI._UPC << "\" " << "\"" << GI._brandName << "\" " 
+            << "\"" << GI._productName << "\" " << "$" << GI._price << std::endl;
+    
+    return stream;
+}
+
 
 
 

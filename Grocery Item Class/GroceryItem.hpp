@@ -17,7 +17,7 @@ class GroceryItem {
 	
 	// insertion and extraction operators
 	friend std::istream & operator>>(std::istream & stream, GroceryItem & GI);
-	friend std::ostream & operator<<(std::istream & stream, const GroceryItem & GI);
+	friend std::ostream & operator<<(std::ostream & stream, const GroceryItem & GI);
 
 	public:
 		std::string UPC();
