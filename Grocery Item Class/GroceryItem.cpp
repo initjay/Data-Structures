@@ -61,6 +61,10 @@ bool operator>=(const GroceryItem & lhs, const GroceryItem& rhs) {
 
 // extraction function
 std::istream & operator>>(std::istream & stream, GroceryItem & GI) {
+    
+    stream >> GI._UPC >> GI._brandName >> GI._productName >> GI._price;
+
+    return stream;
 
 }
 
