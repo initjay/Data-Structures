@@ -6,6 +6,7 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 const double EPSILON = 0.001;
 
@@ -62,7 +63,8 @@ bool operator>=(const GroceryItem & lhs, const GroceryItem& rhs) {
 // extraction function
 std::istream & operator>>(std::istream & stream, GroceryItem & GI) {
     
-    stream >> GI._UPC >> GI._brandName >> GI._productName >> GI._price;
+    stream >> std::quoted(GI._UPC) >> std::quoted(GI._brandName) 
+    >> std::quoted(GI._productName) >> GI._price;
 
     return stream;
 
@@ -71,7 +73,7 @@ std::istream & operator>>(std::istream & stream, GroceryItem & GI) {
 // insertion function
 std::ostream & operator<<(std::ostream & stream, const GroceryItem & GI) {
     stream << "\"" << GI._UPC << "\" " << "\"" << GI._brandName << "\" " 
-            << "\"" << GI._productName << "\" " << "$" << GI._price << std::endl;
+            << "\"" << GI._productName << "\" " << "$" << GI._price << "\n";
     
     return stream;
 }

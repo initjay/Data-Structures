@@ -1,0 +1,14 @@
+
+Enter a UPC, Brand Name, Product Name, and Price separated by spaces.
+ If an entry has a space surround it with quotes. When you are done adding items, quit with CTL-D.
+
+You entered:
+"412" "Kellog" "Cereal" $6.89
+"918" "Kirkland" "Hot Dog" $4.45
+"601" "Frito" "Chips" $2.99
+
+
+Items:
+"601" "Frito" "Chips" $2.99
+"918" "Kirkland" "Hot Dog" $4.45
+"412" "Kellog" "Cereal" $6.89

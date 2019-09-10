@@ -48,6 +48,6 @@ class GroceryItem {
 	private:
     	std::string _UPC, _brandName, _productName;
 
-    double _price;
+    	double _price;
 		
 };
