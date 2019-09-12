@@ -1,6 +1,6 @@
 // Grocery Item Class
 // James Talavera
-// September 2019
+// 9/10
 
 #pragma once
 

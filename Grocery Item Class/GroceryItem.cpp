@@ -1,6 +1,6 @@
 // GroceryItem class implementation
 // James Talavera
-// September 2019
+// 9/10
 
 #include "GroceryItem.hpp"
 #include <string>

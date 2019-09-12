@@ -1,10 +1,17 @@
 // main file
+// James Talavera
+// 9/10
 
 #include<iostream>
+#include<iomanip>
 #include"GroceryItem.hpp"
 #include<vector>
 
 int main() {
+    std::cout << std::showpoint << std::fixed << std::setprecision(2)
+              << "Welcome to Fresh&Breazy! Place grovery items into."; 
+              // FINISH THIS^^
+
     std::vector<GroceryItem*> myGroceries;
 
     std::cout << "\nEnter a UPC, Brand Name, Product Name, and Price "
