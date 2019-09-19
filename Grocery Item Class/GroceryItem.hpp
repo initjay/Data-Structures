@@ -10,31 +10,25 @@ class GroceryItem {
 	// comparison operators
 	friend bool operator==(const GroceryItem & lhs, const GroceryItem & rhs);
 	friend bool operator<(const GroceryItem & lhs, const GroceryItem & rhs);
-	friend bool operator!=(const GroceryItem & lhs, const GroceryItem & rhs);
-	friend bool operator<=(const GroceryItem & lhs, const GroceryItem & rhs);
-	friend bool operator>(const GroceryItem & lhs, const GroceryItem & rhs);
-	friend bool operator>=(const GroceryItem & lhs, const GroceryItem & rhs);
 	
 	// insertion and extraction operators
 	friend std::istream & operator>>(std::istream & stream, GroceryItem & GI);
 	friend std::ostream & operator<<(std::ostream & stream, const GroceryItem & GI);
 
 	public:
-		std::string UPC();
 
+		// Queries (const since they should not modify attributes)
+		std::string UPC() const;
+		std::string brandName() const;
+		std::string productName() const;
+		double price() const;
+
+		// Mutators
 		void UPC(const std::string newUPC);
-
-		std::string brandName();
-
 		void brandName(const std::string newBrandName );
-
-		std::string productName();
-
 		void productName(const std::string newProductName);
-
-		double price();
-
 		void price(const double newPrice);
+
 
 		GroceryItem(std::string UPC = "", 
 					std::string brandName = {},
@@ -47,7 +41,15 @@ class GroceryItem {
 		
 	private:
     	std::string _UPC, _brandName, _productName;
-
-    	double _price;
+    	double _price = 0.0;
 		
 };
+
+// comparison operators
+bool operator==(const GroceryItem & lhs, const GroceryItem & rhs);
+bool operator<(const GroceryItem & lhs, const GroceryItem & rhs);
+
+bool operator!=(const GroceryItem & lhs, const GroceryItem & rhs);
+bool operator<=(const GroceryItem & lhs, const GroceryItem & rhs);
+bool operator>(const GroceryItem & lhs, const GroceryItem & rhs);
+bool operator>=(const GroceryItem & lhs, const GroceryItem & rhs);

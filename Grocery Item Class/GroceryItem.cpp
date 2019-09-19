@@ -8,7 +8,7 @@
 #include <cmath>
 #include <iomanip>
 
-const double EPSILON = 0.001;
+const double EPSILON = 1.0E-4;
 
 // setter functions
 void GroceryItem::UPC(const std::string newUPC) { _UPC = newUPC; }
