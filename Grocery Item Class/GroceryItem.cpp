@@ -10,6 +10,16 @@
 
 const double EPSILON = 1.0E-4;
 
+// Constructor
+GroceryItem::GroceryItem(const std::string productName,
+					     const std::string brandName,
+					     const std::string UPC,
+					     double price)
+    : _UPC(UPC),
+      _brandName(brandName),
+      _productName(productName),
+      _price(price) {}
+
 // Mutators
 void GroceryItem::UPC(const std::string newUPC) { _UPC = newUPC; }
 void GroceryItem::brandName(const std::string newBrandName ) { _brandName = newBrandName; }

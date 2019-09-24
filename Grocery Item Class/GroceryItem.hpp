@@ -18,15 +18,11 @@ class GroceryItem {
 	public:
 
 		// constructors
-		GroceryItem(std::string UPC = "", 
-					std::string brandName = {},
-					std::string productName = {},
-					double price = 0.0)
-					: _UPC(UPC),
-					_brandName(brandName),
-					_productName(productName),
-					_price(price) {}
-
+		GroceryItem() = default;
+		GroceryItem(const std::string productName,
+					const std::string brandName = {},
+					const std::string UPC = {},
+					double price = 0.0);
 
 		// Queries (const since they should not modify attributes)
 		std::string UPC() const;
