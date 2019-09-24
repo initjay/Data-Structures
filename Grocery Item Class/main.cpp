@@ -9,7 +9,8 @@
 
 int main() {
     std::cout << std::showpoint << std::fixed << std::setprecision(2)
-              << "Welcome to Fresh&Breazy! Place grovery items into."; 
+              << "Welcome to Fresh&Breazy! Place grocery items into your shopping "
+              << "cart by entering the appropriate information." << std::endl; 
               // FINISH THIS^^
 
     std::vector<GroceryItem*> myGroceries;
