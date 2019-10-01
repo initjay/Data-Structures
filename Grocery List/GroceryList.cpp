@@ -36,6 +36,13 @@ std::size_t GroceryList::groceries_sl_list_size() const
     /// Some implementations of a singly linked list maintain the size (number of elements in the list).  std::forward_list does
     /// not. The size of singly linked list must be calculated on demand by walking the list from beginning to end counting the
     /// number of elements visited.  The STL's std::distance() function does that, or you can write your own loop.
+    std::size_t count = 0;
+
+    for(auto element : _groceries_sl_list) {
+        count++;
+    }
+
+    return count;
 
   /////////////////////// END-TO-DO ////////////////////////////
 }
