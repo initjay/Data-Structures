@@ -317,6 +317,10 @@ void GroceryList::remove( std::size_t offsetFromTop )
       /// See function FixedVector<T>::erase() in FixedVector.hpp in our Sequence Container Implementation Examples, and
       /// RationalArray::remove() in RationalArray.cpp in our Rational Number Case Study examples.
 
+    std::move(_groceries_array.begin() + offsetFromTop + 1, _groceries_array.begin() + _groceries_array_size, _groceries_array.begin() + offsetFromTop);
+
+    --_groceries_array_size;
+
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
@@ -333,6 +337,8 @@ void GroceryList::remove( std::size_t offsetFromTop )
       /// Behind the scenes, std::vector::erase() shifts to the left everything after the insertion point, just like you
       /// did for the array above.
 
+    _groceries_vector.erase(_groceries_vector.begin() + offsetFromTop);
+
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
@@ -345,6 +351,8 @@ void GroceryList::remove( std::size_t offsetFromTop )
       /// takes a pointer (or more accurately, an iterator) that points to the item to remove.  You need to convert the zero-based
       /// offset from the top to an iterator by advancing _groceries_dl_list.begin() offsetFromTop times.  The STL has a function
       /// called std::next() that does that, or you can write your own loop.
+
+      _groceries_dl_list.erase(std::next(_groceries_dl_list.begin(), offsetFromTop));
 
     /////////////////////// END-TO-DO ////////////////////////////
   }
@@ -359,6 +367,8 @@ void GroceryList::remove( std::size_t offsetFromTop )
       /// look backwards, only forward.  You need to convert the zero-based offset from the top to an iterator by advancing
       /// _groceries_sl_list.before_begin() offsetFromTop times.  The STL has a function called std::next() that does that, or you
       /// can write your own loop.
+
+      _groceries_sl_list.erase_after(std::next(_groceries_sl_list.begin(), offsetFromTop - 1));
 
     /////////////////////// END-TO-DO ////////////////////////////
   }
