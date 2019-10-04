@@ -36,13 +36,16 @@ std::size_t GroceryList::groceries_sl_list_size() const
     /// Some implementations of a singly linked list maintain the size (number of elements in the list).  std::forward_list does
     /// not. The size of singly linked list must be calculated on demand by walking the list from beginning to end counting the
     /// number of elements visited.  The STL's std::distance() function does that, or you can write your own loop.
-    std::size_t count = 0;
+    // std::size_t count = 0;
 
-    for(auto element : _groceries_sl_list) {
-        count++;
-    }
+    // for(auto element : _groceries_sl_list) {
+    //     count++;
+    // }
 
-    return count;
+    // return count;
+
+    return std::distance(_groceries_sl_list.begin(), _groceries_sl_list.end());
+    
 
   /////////////////////// END-TO-DO ////////////////////////////
 }
@@ -371,6 +374,16 @@ void GroceryList::moveToTop( const GroceryItem & item )
   ///////////////////////// TO-DO //////////////////////////////
     /// If the item exists, then remove and reinsert it.  Else do nothing.  Use GroceryList::find() to determine if the grocery item
     /// exists in this grocery list.
+
+    // if the item does not exist, find will return the current size of GroceryList
+    if (GroceryList::find(item) == GroceryList::size())
+      return;
+    
+    // remove item from the list
+    GroceryList::remove(item);
+
+    // append item to beginning of the list
+    GroceryList::insert(item, 1);
 
   /////////////////////// END-TO-DO ////////////////////////////
 }
