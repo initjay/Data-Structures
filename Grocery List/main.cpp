@@ -17,8 +17,6 @@ int main()
                                {"eggs"    },
                                {"bread"   }};
 
-    std::cout<< "My current list:" << thingsToBuy << std::endl;
-
     // Changed my mind, I want to make sure I get eggs so I'm going to move that to the top of my list
     thingsToBuy.moveToTop( {"eggs"} );
 

@@ -251,19 +251,9 @@ void GroceryList::insert( const GroceryItem & item, std::size_t offsetFromTop ) 
       // throw exception if no available room in array
       if (_groceries_array.size() <= _groceries_array_size) throw GroceryList::CapacityExceeded_ex( "Cannot insert to an array at capacity" exception_location);
 
-      std::cout << "\nCurrent Items:";
-
-      for(auto const &elem: _groceries_array)
-        std::cout << std::endl << elem;
-
       // shift all elements to the right, starting at the end of the array through the specified index for insertion, then insert
       std::move_backward(_groceries_array.begin() + offsetFromTop, _groceries_array.begin() + _groceries_array_size, _groceries_array.begin() + _groceries_array_size + 1);
       _groceries_array.at(offsetFromTop) = item;
-
-      std::cout << "\nAfter insert:";
-
-      for(auto const &elem: _groceries_array)
-        std::cout << std::endl << elem;
 
       //adjust array size
       ++_groceries_array_size;
@@ -315,13 +305,16 @@ void GroceryList::insert( const GroceryItem & item, std::size_t offsetFromTop ) 
       /// _groceries_sl_list.before_begin() offsetFromTop times.  The STL has a function called std::next() that does that, or you
       /// can write your own loop.
 
-      _groceries_sl_list.insert_after(std::next(_groceries_sl_list.begin(), offsetFromTop - 1), item);
+      if (offsetFromTop == 0)
+        _groceries_sl_list.push_front(item);
+      else
+        _groceries_sl_list.insert_after(std::next(_groceries_sl_list.begin(), offsetFromTop - 1), item);
 
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
   // Verify the internal grocery list state is still consistent amongst the four containers
-  //if( !containersAreConsistant() ) throw GroceryList::InvalidInternalState_Ex( "Container consistency error" exception_location );
+  if( !containersAreConsistant() ) throw GroceryList::InvalidInternalState_Ex( "Container consistency error" exception_location );
 }
 
 
@@ -463,7 +456,7 @@ void GroceryList::swap( GroceryList & rhs ) noexcept
 *******************************************************************************/
 std::ostream & operator<<( std::ostream & stream, const GroceryList & groceryList )
 {
-  //if( !groceryList.containersAreConsistant() ) throw GroceryList::InvalidInternalState_Ex( "Container consistency error" exception_location );
+  if( !groceryList.containersAreConsistant() ) throw GroceryList::InvalidInternalState_Ex( "Container consistency error" exception_location );
 
   unsigned count = 0;
   for( const auto & item : groceryList._groceries_sl_list )   stream << std::setw(5) << count++ << ":  " << item;
