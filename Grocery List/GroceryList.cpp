@@ -46,7 +46,6 @@ std::size_t GroceryList::groceries_sl_list_size() const
 
     return std::distance(_groceries_sl_list.begin(), _groceries_sl_list.end());
     
-
   /////////////////////// END-TO-DO ////////////////////////////
 }
 
@@ -185,6 +184,12 @@ std::size_t GroceryList::find( const GroceryItem & item ) const
     /// position in all the containers (array, vector, list, and forward_list) so pick just one of those to search.  The STL
     /// provides the find() function that is a perfect fit here, but you may also write your own loop.
 
+    auto itr = std::find(_groceries_array.begin(), _groceries_array.end(), item);
+
+    std::size_t index = std::distance(_groceries_array.begin(), itr);
+
+    return index;
+
   /////////////////////// END-TO-DO ////////////////////////////
 }
 
@@ -237,6 +242,16 @@ void GroceryList::insert( const GroceryItem & item, std::size_t offsetFromTop ) 
       /// See function FixedVector::insert() in FixedVector.hpp in our Sequence Container Implementation Examples, and
       /// RationalArray::insert() in RationalArray.cpp in our Rational Number Case Study examples.
 
+      // throw exception if no available room in array
+      if (_groceries_array.size() <= _groceries_array_size) throw GroceryList::CapacityExceeded_ex( "Cannot insert to an array at capacity" exception_location);
+
+      // shift all elements to the right, starting at the end of the array through the specified index for insertion, then insert
+      std::move_backward(_groceries_array.begin() + offsetFromTop, _groceries_array.begin() + _groceries_array_size - 1, _groceries_array.begin() + _groceries_array_size);
+      _groceries_array.at(offsetFromTop) = item;
+
+      //adjust array size
+      ++_groceries_array_size;
+
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
@@ -253,6 +268,8 @@ void GroceryList::insert( const GroceryItem & item, std::size_t offsetFromTop ) 
       /// Behind the scenes, std::vector::insert() shifts to the right everything at and after the insertion point, just like you
       /// did for the array above.
 
+      _groceries_vector.insert(_groceries_vector.begin() + offsetFromTop, item); // SEG FAULT STARTING HERE, solved by using appropriate arguments in move_backward func?
+
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
@@ -265,6 +282,8 @@ void GroceryList::insert( const GroceryItem & item, std::size_t offsetFromTop ) 
       /// takes a pointer (or more accurately, an iterator) that points to the item to insert before.  You need to convert the
       /// zero-based offset from the top to an iterator by advancing _groceries_dl_list.begin() offsetFromTop times.  The STL has a
       /// function called std::next() that does that, or you can write your own loop.
+
+      _groceries_dl_list.insert(std::next(_groceries_dl_list.begin(), offsetFromTop), item);
 
     /////////////////////// END-TO-DO ////////////////////////////
   }
@@ -279,6 +298,8 @@ void GroceryList::insert( const GroceryItem & item, std::size_t offsetFromTop ) 
       /// backwards, only forward.  You need to convert the zero-based offset from the top to an iterator by advancing
       /// _groceries_sl_list.before_begin() offsetFromTop times.  The STL has a function called std::next() that does that, or you
       /// can write your own loop.
+
+      _groceries_sl_list.insert_after(std::next(_groceries_sl_list.begin(), offsetFromTop - 1), item);
 
     /////////////////////// END-TO-DO ////////////////////////////
   }
@@ -393,7 +414,7 @@ void GroceryList::moveToTop( const GroceryItem & item )
     GroceryList::remove(item);
 
     // append item to beginning of the list
-    GroceryList::insert(item, 1);
+    GroceryList::insert(item, 0);
 
   /////////////////////// END-TO-DO ////////////////////////////
 }
