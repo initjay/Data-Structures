@@ -38,7 +38,7 @@ bool operator==(const GroceryItem & lhs, const GroceryItem& rhs) {
     return lhs._UPC == rhs._UPC
     && lhs._brandName == rhs._brandName
     && lhs._productName == rhs._productName
-    && abs(lhs._price - rhs._price) < EPSILON;
+    && std::abs(lhs._price - rhs._price) < EPSILON;
 }
 
 bool operator!=(const GroceryItem & lhs, const GroceryItem& rhs) {
@@ -52,7 +52,7 @@ bool operator<(const GroceryItem & lhs, const GroceryItem & rhs) {
         return lhs._brandName < rhs._brandName;
     else if (lhs._productName != rhs._productName)
         return lhs._productName < rhs._productName;
-    else if (!(abs(lhs._price - rhs._price) < EPSILON))
+    else if (!(std::abs(lhs._price - rhs._price) < EPSILON))
         return lhs._price < rhs._price;
     else 
         return false;
