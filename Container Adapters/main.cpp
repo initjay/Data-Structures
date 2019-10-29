@@ -57,6 +57,9 @@ namespace
       /// Implement the starter function for the above algorithm.  If the broken cart contains grocery items, move those grocery items
       /// to the working cart while ensuring the breakable items are always on top of the nonbreakable items, just like they already
       /// are in the broken cart.  That is, call the above carefully_move_grocery_items function to start moving items recursively.
+    std::stack<GroceryItem> tempCart;
+
+    carefully_move_grocery_items(brokenCart.size(), brokenCart, workingCart, tempCart);
 
     /////////////////////// END-TO-DO ////////////////////////////
   }
@@ -105,7 +108,7 @@ int main()
   // Snag an empty cart as I enter the grocery store
   ///////////////////////// TO-DO //////////////////////////////
     /// Create an empty shopping cart as a stack of grocery items and call it myCart.
-
+    std::stack<GroceryItem> myCart;
   /////////////////////// END-TO-DO ////////////////////////////
 
 
@@ -125,9 +128,24 @@ int main()
     ///      00038000291210   rice krispies    Kellogg's
     ///      00075457129000   milk             any                     <===  heaviest item, put this on the bottom
 
+
+    GroceryItem item1("milk", "any", "00075457129000");
+    GroceryItem item2("rice krispies", "Kellogg's", "00038000291210");
+    GroceryItem item3("hotdogs", "Applegate Farms", "00025317533003");
+    GroceryItem item4("apple pie", "any", "09073649000493");
+    GroceryItem item5("bread", "any", "00835841005255");
+    GroceryItem item6("eggs", "any", "00688267039317");
+
+    myCart.push(item1);
+    myCart.push(item2);
+    myCart.push(item3);
+    myCart.push(item4);
+    myCart.push(item5);
+    myCart.push(item6);
+
   /////////////////////// END-TO-DO ////////////////////////////
 
-  //auto testData = myCart; *******************remember to uncomment****************************
+  auto testData = myCart;
 
 
 
@@ -136,7 +154,8 @@ int main()
   ///////////////////////// TO-DO //////////////////////////////
     /// Create an empty shopping cart as a stack of grocery items and call it workingCart.  Then carefully move the items in your
     /// broken cart to this working cart by calling the above carefully_move_grocery_items function with two arguments.
-
+    std::stack<GroceryItem> workingCart;
+    carefully_move_grocery_items(myCart, workingCart);
   /////////////////////// END-TO-DO ////////////////////////////
 
 
@@ -146,7 +165,11 @@ int main()
   ///////////////////////// TO-DO //////////////////////////////
     /// Create an empty checkout counter as a queue of grocery items and call it checkoutCounter.  Then remove the grocery items
     /// from your working cart and place them on the checkout counter, i.e., put them in this checkoutCounter queue.
-
+    std::queue<GroceryItem> checkoutCounter;
+    while(!workingCart.empty()) {
+      checkoutCounter.push(workingCart.top());
+      workingCart.pop();
+    }
   /////////////////////// END-TO-DO ////////////////////////////
 
 
@@ -161,7 +184,14 @@ int main()
     /// For each item in the checkout counter queue, find the item by UPC code in the store's database.  If the item on the counter
     /// is found in the database then accumulate the amount due and print the item's full description and price (i.e. write the
     /// item's full description and price to standard output)
-
+    while (!checkoutCounter.empty()) {
+      auto item = storeDataBase.find(checkoutCounter.front().UPC());
+      if (item != nullptr) {
+        std::cout << *item;
+        amountDue += item->price();
+      }
+      checkoutCounter.pop();
+    }
   /////////////////////// END-TO-DO ////////////////////////////
 
 
