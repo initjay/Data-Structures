@@ -1,0 +1,7 @@
+UPC: "00688267039317", Brand: "Nature's Promise", Product: "Nature's Promise Naturals Fresh Brown Eggs Omega 3 Large", Price: $24.66
+UPC: "00835841005255", Brand: "Fiber One", Product: "Fiber One Bread Country White", Price: $3.87
+UPC: "00025317533003", Brand: "Applegate Farms", Product: "Hotdog Uncrd Big Apple", Price: $12.57
+UPC: "00038000291210", Brand: "Rice Krispies", Product: "Kellogg's Rice Krispies Cereal", Price: $17.58
+UPC: "00075457129000", Brand: "Garelick Farms", Product: "Garelick Farms Dairy Pure Milk 1% Lowfat", Price: $9.64
+-------------------------
+Total  $68.32

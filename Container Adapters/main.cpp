@@ -187,7 +187,9 @@ int main()
     while (!checkoutCounter.empty()) {
       auto item = storeDataBase.find(checkoutCounter.front().UPC());
       if (item != nullptr) {
-        std::cout << *item;
+        std::cout << "UPC: " << std::quoted(item->UPC()) << ", Brand: " << std::quoted(item->brandName())
+                  << ", Product: " << std::quoted(item->productName())
+                  << ", Price: $" << item->price() << std::endl;
         amountDue += item->price();
       }
       checkoutCounter.pop();
