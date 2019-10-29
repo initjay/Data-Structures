@@ -35,7 +35,16 @@ namespace
   {
     ///////////////////////// TO-DO //////////////////////////////
       /// Implement the algorithm above.
+      if (quantity == 1) {
+        destinationCart.push(sourceCart.top());
+        sourceCart.pop();
+        return;
+      }
 
+      carefully_move_grocery_items(quantity - 1, sourceCart, spareCart, destinationCart);
+      destinationCart.push(sourceCart.top());
+      sourceCart.pop();
+      carefully_move_grocery_items(quantity - 1, spareCart, destinationCart, sourceCart);
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
@@ -118,7 +127,7 @@ int main()
 
   /////////////////////// END-TO-DO ////////////////////////////
 
-  auto testData = myCart;
+  //auto testData = myCart; *******************remember to uncomment****************************
 
 
 

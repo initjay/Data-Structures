@@ -83,6 +83,20 @@ GroceryItemDatabase::GroceryItemDatabase( const std::string & filename )
       /// Note:  The file is intentionally not explicitly closed.  The file is closed when fin goes out of scope - for whatever
       ///        reason.  See RAII
 
+      while (!fin.eof()) {
+        std::string upc, brandName, productName;
+        double price;
+
+        fin >> upc >> ignore(',') >> brandName >> ignore(',') >> productName
+            >> ignore(',') >> price;
+
+        data.push_back(GroceryItem(upc, brandName, productName, price));
+      }
+
+      for (auto &element: data) {
+        std::cout << element << std::endl;
+      }
+
     /////////////////////// END-TO-DO ////////////////////////////
   }
 
@@ -109,5 +123,12 @@ GroceryItem * GroceryItemDatabase::find( const std::string & upc )
     /// Walk the memory resident container called data looking for a grocery item with a matching upc code.  If found, return a
     /// pointer to that grocery item.  Otherwise return a null pointer.
 
+    for(auto item: data) {
+      if(item.UPC() == upc) {
+        return &item;
+      }
+    }
+
+    return nullptr;
   /////////////////////// END-TO-DO ////////////////////////////
 }
