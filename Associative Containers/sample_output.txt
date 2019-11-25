@@ -1,0 +1,95 @@
+
+Charlie Brown's shopping cart contains:
+	UPC: "00611508524006", Brand: "Boston American", Product: "Gum Tim Lump Of Coal", Price: $9.51
+	-------------------------
+	Total  $9.51
+
+Lucy van Pelt's shopping cart contains:
+	UPC: "00030768009670", Brand: "Sundown Naturals", Product: "Sundown Naturals Liquid-filled Calcium 1200mg Softgels - 60 Ct", Price: $2.12
+	UPC: "00070327012116", Brand: "Paradise", Product: "Pineapple Red Wedges", Price: $16.75
+	UPC: "00072736013753", Brand: "Virginia", Product: "Drssng Vidalia Rspbry Vngrt", Price: $5.93
+	UPC: "00073377801839", Brand: "Earth Therapeutics", Product: "Earth Therapeutics Sleep Mask Blue - 1 Mask", Price: $9.95
+	UPC: "00079471102414", Brand: "Galil", Product: "Olive Grn Manzanillo", Price: $13.94
+	UPC: "00086449903065", Brand: "Crystal", Product: "Crystal Body Deodorant Towelettes - 6 Towelettes", Price: $8.39
+	UPC: "00092657016985", Brand: "Blue Q", Product: "Blue Q Tea - Oolong With Orange - 16 Bags", Price: $0.61
+	UPC: "00216210900003", Brand: "Applegate", Product: "Applegate Naturals Cheddar Cheese", Price: $23.54
+	UPC: "00710069086036", Brand: "Gefen", Product: "Cracker Ff Herb & Grlc", Price: $13.05
+	UPC: "00780872310185", Brand: "Castor & Pollux", Product: "Dog Food Can Tripe Chkn A", Price: $7.63
+	UPC: "00852697001422", Brand: "Happybaby", Product: "Happybaby Organic Baby Food 3 Gobble Gobble  - 7+months", Price: $5.92
+	UPC: "00885229000198", Brand: "Good4u", Product: "Bev 4flvr Palt 1512pc", Price: $7.09
+	-------------------------
+	Total  $114.92
+
+Peppermint Patty's shopping cart contains:
+	UPC: "00021908501871", Brand: "Cascadian Farms", Product: "Potato Spud Puppies", Price: $10.25
+	UPC: "00036192122930", Brand: "Santa Cruz", Product: "Applesauce Strwbry Org", Price: $20.62
+	UPC: "00037466065908", Brand: "Lindt", Product: "Truffle Mini Egg Clpst 24", Price: $22.51
+	UPC: "00051500280645", Brand: "Hungry Jack", Product: "Hungry Jack Complete Buttermilk Pancake & Waffle Mix", Price: $14.54
+	UPC: "00070596000647", Brand: "Ultra Glow", Product: "Ultra Glow Black Soap", Price: $21.19
+	UPC: "00079400266200", Brand: "Degree", Product: "Degree Body Responsive Invisible Solid Deodorant Fresh", Price: $11.95
+	UPC: "00631723300704", Brand: "Divina", Product: "Pepperoncini Greek", Price: $10.59
+	UPC: "00763795931415", Brand: "Hallmark", Product: "Hallmark Plates Nfl Chicago Bears - 8 Ct", Price: $5.51
+	UPC: "00792851355155", Brand: "Heinz", Product: "Soup Farmhse Pto Leek", Price: $5.83
+	UPC: "00813608012401", Brand: "Wisconsin", Product: "Cheese Muenster Jalapeno", Price: $9.98
+	UPC: "00856414001092", Brand: "Mayte", Product: "Mayte Platanitos Plantain Chips Garlic", Price: $14.14
+	UPC: "00898425001333", Brand: "Lifestyle Foods", Product: "Lifestyle Foods Grilled Veggies And Hummus Sandwich", Price: $24.09
+	-------------------------
+	Total  $171.20
+
+Red Baron's shopping cart contains:
+	UPC: "00025317533003", Brand: "Applegate Farms", Product: "Hotdog Uncrd Big Apple", Price: $12.57
+	UPC: "00038000291210", Brand: "Rice Krispies", Product: "Kellogg's Rice Krispies Cereal", Price: $17.58
+	UPC: "00075457129000", Brand: "Garelick Farms", Product: "Garelick Farms Dairy Pure Milk 1% Lowfat", Price: $9.64
+	UPC: "00688267039317", Brand: "Nature's Promise", Product: "Nature's Promise Naturals Fresh Brown Eggs Omega 3 Large", Price: $24.66
+	UPC: "00835841005255", Brand: "Fiber One", Product: "Fiber One Bread Country White", Price: $3.87
+	"09073649000493" (apple pie) not found, item is free!
+	-------------------------
+	Total  $68.32
+
+Schroeder's shopping cart contains:
+	UPC: "00016055456747", Brand: "Buried Treasure", Product: "Buried Treasure Children's Complete Citrus - 16 Fl Oz", Price: $10.47
+	UPC: "00021908743325", Brand: "Cascadian Farm", Product: "Cascadian Farm Organic Granola Cereal Maple Brown Sugar", Price: $12.53
+	UPC: "00072591002251", Brand: "Log House", Product: "Chip Pnut Bttr", Price: $9.74
+	UPC: "00084783499008", Brand: "Dr. Christopher's Formulas", Product: "Christopher's Cayenne Heat Massage Oil - 4 Fl Oz", Price: $23.25
+	UPC: "00219019100001", Brand: "Nature's Promise", Product: "Nature's Promise Laura's Lean All Natural Ground Beef 92% Lean", Price: $14.06
+	UPC: "00637876981630", Brand: "Piacci", Product: "Piacci Fior-di-latte Ovoline Fresh Mozzarella", Price: $14.67
+	UPC: "00716237183507", Brand: "Giovanni Hair Care Products", Product: "Giovanni D:tox System Facial Cleansing Towelettes - 30 Towelettes", Price: $15.82
+	UPC: "00886911000052", Brand: "East Riding Farms", Product: "Pastry Popover Bowl Size", Price: $7.55
+	UPC: "00890692002020", Brand: "Beaute De Maman", Product: "Beaute De Maman Stretch Mark Cream", Price: $16.55
+	-------------------------
+	Total  $124.64
+
+Woodstock's shopping cart contains:
+	UPC: "00018000001958", Brand: "Pillsbury", Product: "Pillsbury Cinnamon Mini-bites With Icing - 24 Ct", Price: $17.10
+	UPC: "00021000778690", Brand: "Kraft", Product: "Kraft Velveeta Cheesy Mashed Potatoes", Price: $3.63
+	UPC: "00033674100066", Brand: "Nature's Way", Product: "Nature's Way Forskohlii - 60 Ct", Price: $6.11
+	UPC: "00041331092609", Brand: "Goya", Product: "Frz Spnsh Omelet", Price: $16.84
+	UPC: "00041520010667", Brand: "Careone", Product: "Careone Mouth Wash Alcohol Free Light Mint", Price: $11.21
+	UPC: "00070177862640", Brand: "Twinings Of London", Product: "Twinings K-cup Tea Sampler - 10 Ct", Price: $10.94
+	UPC: "00071758100823", Brand: "Fiesta", Product: "Ssnng Pepper New Mexico", Price: $21.24
+	UPC: "00216079600007", Brand: "Usda Meat", Product: "Lamb Chops Loin", Price: $11.08
+	UPC: "00217039300005", Brand: "Usda Meat", Product: "Top Butt Filet Steak", Price: $22.74
+	UPC: "00636874220338", Brand: "Eo", Product: "Face Exfoliate", Price: $18.74
+	UPC: "00688267133442", Brand: "Ahold", Product: "Ahold Extra Bold 100% Arabica Coffee Single Serving Cups - 12 Ct", Price: $20.06
+	UPC: "00688267138973", Brand: "Simply Enjoy", Product: "Simply Enjoy Acai Berry Loose Organic Green Tea", Price: $20.41
+	UPC: "00790555051526", Brand: "Walnut Acres", Product: "Walnut Acres Organic Whole Black Beans", Price: $24.24
+	UPC: "00859013004327", Brand: "Wissotsky", Product: "Tea Nana Mint Dsp 60pc", Price: $22.05
+	UPC: "00891475001421", Brand: "Trujoy Sweets", Product: "Candy Fruit Chews", Price: $20.94
+	-------------------------
+	Total  $247.33
+
+
+
+"00073377801839" at 12, re-ordering 20 more
+"00070596000647" at 12, re-ordering 20 more
+"00763795931415" at 11, re-ordering 20 more
+"00025317533003" at  8, re-ordering 20 more
+"00075457129000" at  9, re-ordering 20 more
+"00072591002251" at 11, re-ordering 20 more
+"00219019100001" at 13, re-ordering 20 more
+"00041331092609" at  8, re-ordering 20 more
+"00688267133442" at  8, re-ordering 20 more
+"00688267138973" at 10, re-ordering 20 more
+
+
+TESTS PASSED
