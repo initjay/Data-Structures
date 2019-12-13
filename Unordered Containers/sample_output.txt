@@ -1,0 +1,17 @@
+PASSED numberOfWords: Frankenstein   : expected and actual '7195'
+PASSED wordCount: Frankenstein       : expected and actual '24'
+PASSED wordCount: life               : expected and actual '114'
+PASSED wordCount: feared             : expected and actual '13'
+PASSED wordCount: the                : expected and actual '4187'
+PASSED mostFrequentWord: Frankenstein: expected and actual 'the'
+PASSED maxBucketSize: Frankenstein   : expected and actual '7'
+
+
+PASSED numberOfWords: Sleepy Hollow   : expected and actual '3231'
+PASSED wordCount: Ichabod             : expected and actual '45'
+PASSED wordCount: the                 : expected and actual '917'
+PASSED mostFrequentWord: Sleepy Hollow: expected and actual 'the'
+PASSED maxBucketSize: Sleepy Hollow   : expected and actual '5'
+
+
+Summary: 12 of 12 (100%) tests passed
